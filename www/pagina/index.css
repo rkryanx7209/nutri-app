@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #343434, #161616);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-box {
+    width: min(460px, 100%);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 28px;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+    padding: 34px 24px;
+    text-align: center;
+}
+
+.login-box h2 {
+    font-size: clamp(1.8rem, 3vw, 2.1rem);
+    margin-bottom: 10px;
+}
+
+.login-box p {
+    margin-bottom: 24px;
+    color: #dbe7d5;
+    font-size: 0.95rem;
+}
+
+.perfil-icon {
+    font-size: 3.8rem;
+    color: #8fa081;
+    margin-bottom: 16px;
+}
+
+.grid-servicos {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.btn-padrao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 18px;
+    background-color: #8fa081;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 999px;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.btn-padrao:hover {
+    opacity: 0.92;
+    transform: translateY(-2px);
+}
+
+.botoes-nav {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-voltar {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-sair {
+    background-color: #a04545;
+}
+
+@media (max-width: 640px) {
+    .login-box {
+        padding: 28px 18px;
+        border-radius: 22px;
+    }
+
+    .botoes-nav {
+        grid-template-columns: 1fr;
+    }
+}

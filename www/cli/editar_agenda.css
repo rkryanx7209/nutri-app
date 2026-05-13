@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.confirmacao-box {
+    background-color: #252525;
+    padding: 30px 24px;
+    border-radius: 24px;
+    width: min(560px, 100%);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+h2 {
+    color: #8fa081;
+    margin-bottom: 24px;
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    text-align: center;
+}
+
+.row-dupla {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.campo-edicao {
+    margin-bottom: 18px;
+}
+
+.campo-edicao label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    color: #8fa081;
+    font-weight: 500;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="text"],
+.select-editar {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: none;
+    background-color: #353535;
+    color: #fff;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.readonly-style {
+    background-color: #222222 !important;
+    color: #aaaaaa !important;
+}
+
+.confirmacao-botoes {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.btn-pill {
+    flex: 1;
+    padding: 14px 16px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.btn-pill:hover {
+    transform: translateY(-2px);
+}
+
+.btn-confirmar {
+    background-color: #8fa081;
+    color: #1a1a1a;
+}
+
+.btn-voltar {
+    background-color: #444;
+    color: #fff;
+}
+
+#sessao-endereco {
+    background: rgba(0, 0, 0, 0.16);
+    padding: 18px;
+    border-radius: 18px;
+    margin-bottom: 22px;
+    border: 1px dashed rgba(143, 160, 129, 0.25);
+}
+
+@media (max-width: 620px) {
+    .confirmacao-box {
+        padding: 24px 16px;
+        border-radius: 18px;
+    }
+
+    .row-dupla,
+    .confirmacao-botoes {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+}

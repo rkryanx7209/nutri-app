@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container-painel {
+    background: #252525;
+    padding: 30px 24px;
+    border-radius: 24px;
+    width: 100%;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+h1 {
+    color: #8fa081;
+    margin-bottom: 25px;
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    text-align: center;
+}
+
+.colunas-avaliacoes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.coluna {
+    text-align: left;
+}
+
+.coluna h2 {
+    font-size: 1.05rem;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+.lista-avaliacoes {
+    max-height: 460px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.card-comentario {
+    background: #323232;
+    border-radius: 16px;
+    padding: 18px;
+    margin-bottom: 14px;
+    border-left: 5px solid #444;
+}
+
+.card-bom {
+    border-left-color: #8fa081;
+}
+
+.card-ruim {
+    border-left-color: #ff6b6b;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.card-header strong {
+    font-size: 0.98rem;
+    color: #ffffff;
+}
+
+.nota-tag {
+    background: #4a5444;
+    color: #c9d6c2;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: bold;
+}
+
+.texto-comentario {
+    color: #d2d2d2;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-avaliacoes {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.btn-pill {
+    display: inline-flex;
+    background: #8fa081;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.25s ease;
+}
+
+.btn-pill:hover {
+    transform: translateY(-2px);
+}
+
+@media (max-width: 860px) {
+    .colunas-avaliacoes {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 520px) {
+    body {
+        padding: 12px;
+    }
+
+    .container-painel {
+        padding: 24px 16px;
+        border-radius: 18px;
+    }
+
+    .btn-pill {
+        width: 100%;
+        justify-content: center;
+    }
+}

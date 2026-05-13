@@ -1,0 +1,505 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: radial-gradient(circle at top, #343434, #1f1f1f);
+    color: #ffffff;
+    min-height: 100vh;
+    padding-top: 100px;
+    /* Espaço para o menu fixo */
+}
+
+/* ================= MARCAS D'ÁGUA (NUTRIÇÃO) ================= */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.bg-icon {
+    position: absolute;
+    /* Aumentei a visibilidade significativamente */
+    opacity: 0.15;
+    /* Adicionei brilho para destacar no fundo escuro */
+    filter: blur(1px) drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+    user-select: none;
+    font-size: 100px;
+    /* Aumentei o tamanho padrão */
+    transition: all 0.5s ease;
+}
+
+/* Posições estratégicas para não ficarem escondidos atrás dos cards */
+.icon-1 {
+    top: 10%;
+    left: 5%;
+    transform: rotate(-15deg);
+}
+
+.icon-2 {
+    top: 35%;
+    right: 5%;
+    transform: rotate(20deg);
+    font-size: 150px;
+}
+
+.icon-3 {
+    bottom: 10%;
+    left: 8%;
+    transform: rotate(-10deg);
+}
+
+.icon-4 {
+    top: 75%;
+    right: 12%;
+    transform: rotate(15deg);
+    font-size: 120px;
+}
+
+/* Ajuste no Body para garantir que o fundo não cubra os ícones */
+body {
+    background: radial-gradient(circle at center, #3a3a3a 0%, #121212 100%) !important;
+    position: relative;
+    z-index: 0;
+}
+
+/* ================= MENU (CÁPSULA FIXA) ================= */
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2000;
+}
+
+.menu-centro {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #7b8d72;
+    padding: 10px 25px;
+    border-radius: 50px;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-wrapper::-webkit-scrollbar {
+    height: 0;
+}
+
+.menu-wrapper a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 30px;
+    transition: 0.3s ease;
+    border: 1px solid white;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.menu-direita {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-menu-padrao {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.menu-wrapper a:hover {
+    background: #dbebd3;
+    color: #7b8d72;
+    transform: translateY(-2px);
+    border-color: #dbebd3;
+}
+
+/* Destaque para o botão sair */
+.btn-sair:hover {
+    background: #ff5f5f !important;
+    color: white !important;
+    border-color: #ff5f5f !important;
+}
+
+/* ================= SEÇÕES ================= */
+.secao {
+    min-height: 100vh;
+    padding: 100px 8%;
+    display: flex;
+    align-items: center;
+}
+
+.conteudo {
+    max-width: 1200px;
+    margin: auto;
+    width: 100%;
+}
+
+.centralizado {
+    text-align: center;
+}
+
+/* ================= HERO ================= */
+.home-hero .hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 50px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.hero-texto {
+    max-width: 520px;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: rgba(123, 141, 114, 0.2);
+    padding: 8px 18px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    color: #dbebd3;
+    font-size: 14px;
+}
+
+.hero-titulo {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-botoes {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn-hero {
+    background: #7b8d72;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-secundario {
+    border: 1px solid white;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+.hero-imagem img,
+.card-foto img {
+    width: 320px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* ================= SOBRE ================= */
+.sobre-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 28px;
+    padding: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sobre-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+/* ================= FORMULÁRIOS (VERSÃO CORRIGIDA) ================= */
+.form-container {
+    max-width: 600px;
+    margin: 40px auto 0;
+}
+
+.form-estilizado {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-grupo {
+    display: flex;
+    gap: 15px;
+}
+
+/* Estilo para Inputs, Textarea e Select */
+.form-estilizado input,
+.form-estilizado textarea,
+.form-estilizado select {
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Força o fundo escuro e o texto branco para evitar o erro do print */
+    background-color: #2a2a2a !important;
+    color: #ffffff !important;
+    outline: none;
+    font-size: 15px;
+    width: 100%;
+    appearance: none;
+    /* Remove estilos padrão do sistema */
+}
+
+/* Garante que as opções de escolha (dentro do select) apareçam com fundo escuro */
+.form-estilizado select option {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+/* Estilo do placeholder (aquele texto que some quando você digita) */
+.form-estilizado input::placeholder,
+.form-estilizado textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Botão do formulário */
+.form-estilizado button {
+    background: #7b8d72;
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-estilizado button:hover {
+    background: #dbebd3;
+    color: #7b8d72;
+    transform: translateY(-3px);
+}
+
+/* ================= REDES & FOOTER ================= */
+.social-icon {
+    font-size: 45px;
+    color: white;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.social-icon:hover {
+    color: #dbebd3;
+    transform: scale(1.2);
+}
+
+.footer {
+    background: #7b8d72;
+    text-align: center;
+    padding: 40px;
+    margin-top: 50px;
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 900px) {
+    body {
+        padding-top: 120px;
+    }
+
+    .menu {
+        padding: 12px;
+    }
+
+    .menu-wrapper {
+        width: min(100%, 95%);
+        padding: 15px;
+        border-radius: 20px;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none;
+        scroll-behavior: smooth;
+    }
+
+    .menu-wrapper a {
+        font-size: 11px;
+        padding: 6px 12px;
+    }
+
+    .hero-container,
+    .sobre-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .hero-imagem img,
+    .card-foto img {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .input-grupo {
+        flex-direction: column;
+    }
+
+    .secao {
+        min-height: auto;
+        padding: 80px 5% 60px;
+    }
+
+    .sobre-card {
+        padding: 35px 22px;
+    }
+
+    .hero-botoes {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        padding-top: 128px;
+    }
+
+    .bg-icon {
+        font-size: 72px;
+        opacity: 0.1;
+    }
+
+    .icon-2,
+    .icon-4 {
+        font-size: 90px;
+    }
+
+    .menu {
+        padding: 10px;
+    }
+
+    .menu-wrapper {
+        width: 100%;
+        padding: 10px 12px;
+        gap: 6px;
+        border-radius: 18px;
+    }
+
+    .menu-wrapper a,
+    .btn-menu-padrao {
+        font-size: 11px;
+        padding: 8px 14px;
+    }
+
+    .menu-direita {
+        gap: 6px;
+    }
+
+    .hero-container {
+        gap: 28px;
+        padding: 28px 18px;
+    }
+
+    .hero-titulo {
+        font-size: 24px;
+    }
+
+    .hero-badge {
+        font-size: 12px;
+        padding: 7px 14px;
+    }
+
+    .hero-botoes {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-hero,
+    .btn-secundario {
+        width: 100%;
+        text-align: center;
+        padding: 13px 18px;
+    }
+
+    .sobre-card {
+        padding: 28px 18px;
+        border-radius: 22px;
+    }
+
+    .form-estilizado input,
+    .form-estilizado textarea,
+    .form-estilizado select,
+    .form-estilizado button {
+        font-size: 14px;
+    }
+
+    .footer {
+        padding: 28px 18px;
+    }
+}
+
+/* ================= ANIMAÇÃO CARD HOME ================= */
+
+/* Animação ao carregar */
+.home-hero .hero-container {
+    animation: heroFadeUp 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes heroFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Efeito suave ao passar o mouse */
+.home-hero .hero-container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+    transition: 0.4s ease;
+}

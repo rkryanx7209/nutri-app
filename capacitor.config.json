@@ -1,0 +1,11 @@
+{
+  "appId": "tc.gt.nutri",
+  "appName": "Daniele Franca Nutricionista",
+  "webDir": "www",
+  "server": {
+    "allowNavigation": [
+      "nutri.gt.tc",
+      "*.nutri.gt.tc"
+    ]
+  }
+}

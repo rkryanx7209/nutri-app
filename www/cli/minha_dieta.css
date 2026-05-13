@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.container-dieta {
+    background: #252525;
+    padding: 30px 24px;
+    border-radius: 24px;
+    width: min(640px, 100%);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+}
+
+h2 {
+    color: #9db093;
+    margin-bottom: 24px;
+    font-size: clamp(1.7rem, 3vw, 2.1rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.lista-dieta {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.card-refeicao {
+    background: #353535;
+    border-radius: 16px;
+    padding: 18px 18px;
+    text-align: left;
+    border-left: 5px solid #8fa081;
+}
+
+.card-refeicao strong {
+    font-size: 1rem;
+    color: #8fa081;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-refeicao p {
+    margin-top: 8px;
+    font-size: 0.94rem;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+.sem-dieta {
+    color: #b0b0b0;
+    margin: 20px 0;
+}
+
+.container-botoes {
+    margin-top: 24px;
+}
+
+.btn-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 24px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none !important;
+    transition: all 0.25s ease;
+    border: none;
+}
+
+.btn-pill:hover {
+    transform: translateY(-2px);
+}
+
+.escuro {
+    background-color: #3d3d3d;
+    color: #ffffff !important;
+}
+
+@media (max-width: 620px) {
+    .container-dieta {
+        padding: 24px 16px;
+        border-radius: 18px;
+    }
+
+    .btn-pill {
+        width: 100%;
+    }
+}

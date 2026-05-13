@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #333333, #171717);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-box {
+    width: min(480px, 100%);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 28px;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+    padding: 34px 26px;
+    text-align: center;
+}
+
+.login-box h2 {
+    margin-bottom: 24px;
+    color: #ffffff;
+    font-size: clamp(1.7rem, 3vw, 2rem);
+}
+
+.login-box input,
+.select-pill {
+    width: 100%;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    outline: none;
+    font-size: 0.95rem;
+    background: #ffffff;
+    color: #333333;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.select-pill {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='%23333' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+}
+
+.botoes-login {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.btn-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.25s ease;
+    border: 2px solid transparent;
+}
+
+.btn-pill:hover {
+    transform: translateY(-2px);
+}
+
+.verde-musgo {
+    background-color: #8fa081;
+    color: white;
+}
+
+.outline-verde {
+    background: transparent;
+    border-color: #8fa081;
+    color: #8fa081;
+}
+
+.outline-verde:hover {
+    background: #8fa081;
+    color: #ffffff;
+}
+
+.erro-login {
+    background: rgba(255, 82, 82, 0.14);
+    color: #ffd2d2;
+    padding: 11px 14px;
+    border-radius: 16px;
+    margin-bottom: 14px;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 520px) {
+    .login-box {
+        padding: 28px 18px;
+        border-radius: 22px;
+    }
+
+    .input-row {
+        grid-template-columns: 1fr;
+    }
+}

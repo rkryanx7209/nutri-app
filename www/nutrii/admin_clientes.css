@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container-dieta {
+    background: #252525;
+    padding: 30px 24px;
+    border-radius: 24px;
+    width: min(720px, 100%);
+    text-align: center;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+h2 {
+    color: #8fa081;
+    margin-bottom: 26px;
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+}
+
+.lista-clientes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 430px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.card-cliente {
+    background: #333333;
+    padding: 15px 20px;
+    border-radius: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    border-left: 5px solid #7b8d72;
+}
+
+.nome-cliente {
+    font-weight: 500;
+    font-size: 0.98rem;
+    color: #e0e0e0;
+    text-align: left;
+}
+
+.btn-pill-sm {
+    background: #7b8d72;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.btn-pill-sm:hover,
+.btn-pill-voltar:hover {
+    transform: translateY(-2px);
+}
+
+.footer-lista {
+    margin-top: 24px;
+}
+
+.btn-pill-voltar {
+    width: min(100%, 380px);
+    background: #7b8d72;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media (max-width: 620px) {
+    .container-dieta {
+        padding: 24px 16px;
+        border-radius: 18px;
+    }
+
+    .card-cliente {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .nome-cliente {
+        text-align: center;
+    }
+
+    .btn-pill-sm {
+        width: 100%;
+    }
+}
